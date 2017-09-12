@@ -3,14 +3,11 @@
 module.exports.genweekBody = genweekBody;
 module.exports.genYearBody = genYearBody;
 
-console.log("hi");
-
-
-var data=[
+var data=
   {
-    "2017": [
+    "2017": 
       {
-          'jan': [
+          'jan': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -21,8 +18,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'feb': [
+          ,
+        'feb': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -33,8 +30,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'mar': [
+          ,
+        'mar': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -45,8 +42,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'apr': [
+        ,
+        'apr': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -57,8 +54,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'jun': [
+          ,
+        'jun': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -69,8 +66,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'jul': [
+          ,
+        'jul': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -81,8 +78,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'aug': [
+          ,
+        'aug': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -93,8 +90,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'sep': [
+          ,
+        'sep': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -105,8 +102,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'oct': [
+          ,
+        'oct': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -117,8 +114,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'nov': [
+          ,
+        'nov': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -129,8 +126,8 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
-        'dec': [
+          ,
+        'dec': 
             {
                 'week1Orders' : 10,
                 'week1income' : 20,
@@ -141,7 +138,7 @@ var data=[
                 'week4Orders' : 10,
                 'week4income' : 20,
             }
-          ],
+          ,
         'janTotalOrder': 100,
         'janIncome':200,
         'febTotalOrder': 100,
@@ -165,15 +162,11 @@ var data=[
         'decTotalOrder': 100,
         'decIncome':200,
       }
-    ]
-  }
-]
+    
+  };
 
-function test(){
-console.log(JSON.stringify(data));
-}
 
-test();
+genweekBody(data,'2017','jan')
 
 function genweekBody(data, year, month) {
     return new Promise((resolve, reject) => {
@@ -204,6 +197,7 @@ function genweekBody(data, year, month) {
         }
         ];
         resolve(weekBody);
+        console.log(weekBody);
     });
 };
 
