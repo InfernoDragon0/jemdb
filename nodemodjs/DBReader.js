@@ -1,5 +1,7 @@
 //read from db, then send to merchant_index via ejs
 
+module.export.genweekBody.genweekBody;
+module.export.genYearBody.genYearBody;
 
 function genweekBody(data, year, month) {
     return new Promise((resolve, reject) => {
