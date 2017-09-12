@@ -919,13 +919,13 @@ function runWithNewData(Month, filter) {
 
     var body = JSON.parse(weekbody.replace(/&#34;/g, '"'));
 
-        if (filter == "y") {
+        if (filter == "n") {
                 body = JSON.parse(weekbody.replace(/&#34;/g, '"'));
         }
         else {
             body = JSON.parse(yearbody.replace(/&#34;/g, '"'));
         };
-        console.log("body is " + body)
+        console.log("body is " + JSON.stringify(body))
     var chart = AmCharts.makeChart("dashboard_amchart_3", {
                 "type": "serial",
                 "addClassNames": true,
