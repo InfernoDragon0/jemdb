@@ -31,6 +31,11 @@ app.get('/', function (req, res) { //base page
 
 app.post('/', function (req, res) { //base page
     //dbreader(res)...
+    var month = 1
+    var filter = 1
+    var weekBody = 1
+    var yearBody = 1
+
     res.render(path.join(__dirname + '/html/merchant_index.html'),
             {
             month : month,
