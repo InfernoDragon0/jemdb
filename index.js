@@ -32,7 +32,7 @@ app.post('/', function (req, res) { //base page
 app.get('/', function (req, res) { //base page
     //dbreader(res)...
 
-    database.genweekBody(database.data, "2017", "feb").then((weekvalue) => {
+    database.genweekBody(database.data, "2017").then((weekvalue) => {
         database.genYearBody(database.data, "2017").then((yearvalue) => { 
             res.render(path.join(__dirname + '/html/merchant_index.html'),
             {

@@ -920,7 +920,9 @@ function runWithNewData(Month, filter) {
     var body = JSON.parse(weekbody.replace(/&#34;/g, '"'));
 
         if (filter == "n") {
-                body = JSON.parse(weekbody.replace(/&#34;/g, '"'));
+
+                console.log ("hii"+JSON.parse(weekbody[Month]));
+                body = JSON.parse(weekbody[Month].replace(/&#34;/g, '"'));
         }
         else {
             body = JSON.parse(yearbody.replace(/&#34;/g, '"'));
