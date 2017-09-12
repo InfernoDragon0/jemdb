@@ -3,7 +3,9 @@
 module.exports.genweekBody = genweekBody;
 module.exports.genYearBody = genYearBody;
 module.exports.data = data;
+function dataGEN(input) {
 
+};
 var data =
     {
         "2017":
