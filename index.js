@@ -29,6 +29,10 @@ app.get('/', function (req, res) { //base page
     res.render(path.join(__dirname + '/html/merchant_index.html'));
 });
 
+app.post('/', function (req, res) { //base page
+    res.render(path.join(__dirname + '/html/merchant_index.html'));
+});
+
 app.get('/login', function (req, res) { //base page
     res.render(path.join(__dirname + '/html/merchant_login.html'));
 });
@@ -36,3 +40,7 @@ app.get('/login', function (req, res) { //base page
 app.get('/lock2', function (req, res) { //base page
     res.render(path.join(__dirname + '/html/page_user_lock_2.html'));
 });
+
+ app.use(function (req, res, next) {
+        res.status(404).send("There is no page here! :c")
+    });
