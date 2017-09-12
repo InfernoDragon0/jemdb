@@ -2,6 +2,7 @@
 
 module.exports.genweekBody = genweekBody;
 module.exports.genYearBody = genYearBody;
+module.exports.data = data;
 
 var data=
   {
@@ -166,9 +167,9 @@ var data=
   };
 
 
-genweekBody(data,'2017','jan')
+//genweekBody(data,'2017','jan')
 
-function genweekBody(data, year, month) {
+function genweekBody(datax, year, month) { //datax change to data for production
     return new Promise((resolve, reject) => {
 
         var weekBody = [{
