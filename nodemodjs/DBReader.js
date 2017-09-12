@@ -148,6 +148,8 @@ var data=
         'marIncome':200,
         'aprTotalOrder': 100,
         'aprIncome':200,
+        'mayTotalOrder': 100,
+        'mayIncome':200,
         'junTotalOrder': 100,
         'junIncome':200,
         'julTotalOrder': 100,
@@ -205,7 +207,7 @@ function genweekBody(datax, year, month) { //datax change to data for production
 
 
 
-function genYearBody(data,year) {
+function genYearBody(datax,year) { //change back to data from datax when real data is ready
 return new Promise((resolve, reject) => {
 
     var yearBody = [{
@@ -260,6 +262,7 @@ return new Promise((resolve, reject) => {
     }
     ];
 resolve(yearBody);
+console.log(yearBody)
 });
 };
 

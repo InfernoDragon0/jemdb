@@ -913,105 +913,16 @@ function myFunctionYear() {
     runWithNewData("-","y");
 }
 
-function runWithNewData(Month,filter,weekBody,yearBody) {
-    console.log("weekbody is " + weekBody)
-
-    var week = Month
-                var week1Orders = 10
-                var week2Orders = 20
-                var week3Orders = 30
-                var week4Orders = 40
-                var week1income = 10
-                var week2income = 20
-                var week3income = 30
-                var week4income = 4
-var weekBody = [{
-
-                "date": week + " Week 1",
-                "totalOrders": week1Orders,
-                "income": week1income
-            },
-            {
-
-                "date": week + " Week 2",
-                "totalOrders": week2Orders,
-                "income": week2income
-            },
-            {
-
-                "date": week + " Week 3",
-                "totalOrders": week3Orders,
-                "income": week3income
-            },
-            {
-
-                "date": week + " Week 4",
-                "totalOrders": week4Orders,
-                "income": week4income
-            }
-            ];
-
-        var yearBody = [{
-
-                "date": "Jan",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Feb",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Mar",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Apr",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "May",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Jun",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Jul",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Aug",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Sep",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Oct",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Nov",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }, {
-                "date": "Dec",
-                "totalOrders": 23.5,
-                "income": 21.1
-            }
-            ];
+function runWithNewData(Month, filter) {
+    console.log("weekbody is " + weekbody)
+    console.log("yearbody is " + yearbody)
 
         if (filter == "y") {
-                var body = yearBody;
-                
-            }
-            else {
-                var body = weekBody;
-            };
-  
-
+                var body = weekbody;
+        }
+        else {
+            var body = yearbody;
+        };
     var chart = AmCharts.makeChart("dashboard_amchart_3", {
                 "type": "serial",
                 "addClassNames": true,
@@ -1075,7 +986,7 @@ if (App.isAngularJsApp() === false) {
     jQuery(document).ready(function () {
         
         Dashboard.init(); // init metronic core componets
-        runWithNewData("jan", "filter", weekbody, "") // do things with the data received
+        runWithNewData("-", "filter") // do things with the data received
     });
 }
 
