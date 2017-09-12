@@ -1,7 +1,182 @@
 //read from db, then send to merchant_index via ejs
 
-module.export.genweekBody.genweekBody;
-module.export.genYearBody.genYearBody;
+// module.export.genweekBody.genweekBody;
+// module.export.genYearBody.genYearBody;
+
+console.log("hi");
+
+
+var data=[
+  {
+    "2017": [
+      {
+          'jan': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'feb': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'mar': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'apr': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'jun': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'jul': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'aug': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'sep': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'oct': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'nov': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'dec': [
+            {
+                'week1Orders' : 10,
+                'week1income' : 20,
+                'week2Orders' : 10,
+                'week2income' : 20,
+                'week3Orders' : 10,
+                'week3income' : 20,
+                'week4Orders' : 10,
+                'week4income' : 20,
+            }
+          ],
+        'janTotalOrder': 100,
+        'janIncome':200,
+        'febTotalOrder': 100,
+        'febIncome':200,
+        'marTotalOrder': 100,
+        'marIncome':200,
+        'aprTotalOrder': 100,
+        'aprIncome':200,
+        'junTotalOrder': 100,
+        'junIncome':200,
+        'julTotalOrder': 100,
+        'julIncome':200,
+        'augTotalOrder': 100,
+        'augIncome':200,
+        'sepTotalOrder': 100,
+        'sepIncome':200,
+        'octTotalOrder': 100,
+        'octIncome':200,
+        'novTotalOrder': 100,
+        'novIncome':200,
+        'decTotalOrder': 100,
+        'decIncome':200,
+      }
+    ]
+  }
+]
+
+function test(){
+console.log(JSON.stringify(data));
+}
+
+test();
+
+
+
 
 function genweekBody(data, year, month) {
     return new Promise((resolve, reject) => {
