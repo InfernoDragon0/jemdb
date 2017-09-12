@@ -2,7 +2,7 @@ var ejs = require('ejs'); //ejs is not express, but is a extension to express
 var path = require("path"); //pathing system
 var bodyParser = require('body-parser'); //parse POST data
 var session = require('express-session'); //temporary to store sensitive data, see if theres better way
-//const database = require("./nodemodjs/BTCosmosDB.js");
+const database = require("./nodemodjs/DBReader.js");
 const express = require('express'); //express is good
 const app = express();
 const port = 5101;
@@ -25,24 +25,29 @@ app.use(express.static(path.join(__dirname, '/assets')));
 app.listen(process.env.PORT || port);
 console.log("Listening on port " + port);
 
-app.get('/', function (req, res) { //base page
+app.post('/', function (req, res) { //base page
     res.render(path.join(__dirname + '/html/merchant_index.html'));
 });
 
-app.post('/', function (req, res) { //base page
+app.get('/', function (req, res) { //base page
     //dbreader(res)...
-    var month = 1
-    var filter = 1
-    var weekBody = 1
-    var yearBody = 1
 
-    res.render(path.join(__dirname + '/html/merchant_index.html'),
+    var data = {"2017" : {"jan" : {"week1Orders" : "100", "week1income" : "120"}}}
+    
+
+    database.genweekBody(data, "2017", "jan").then((weekvalue) => {
+        //database.genYearBody().then((yearvalue) => { 
+            console.log(weekvalue)
+            res.render(path.join(__dirname + '/html/merchant_index.html'),
             {
-            month : month,
-            filter: filter,
-            weekBody: weekBody,
-            yearBody: yearBody
+                weekbody: weekvalue
             });
+        //})
+        
+    })
+    
+
+    
 });
 
 app.get('/login', function (req, res) { //base page

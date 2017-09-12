@@ -914,6 +914,8 @@ function myFunctionYear() {
 }
 
 function runWithNewData(Month,filter,weekBody,yearBody) {
+    console.log("weekbody is " + weekBody)
+
     var week = Month
                 var week1Orders = 10
                 var week2Orders = 20
@@ -1071,7 +1073,9 @@ var weekBody = [{
 
 if (App.isAngularJsApp() === false) {
     jQuery(document).ready(function () {
+        
         Dashboard.init(); // init metronic core componets
+        runWithNewData("jan", "filter", weekbody, "") // do things with the data received
     });
 }
 
