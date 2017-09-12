@@ -914,7 +914,7 @@ function myFunctionYear() {
     runWithNewData("-","y");
 }
 
-function runWithNewData(Month,filter) {
+function runWithNewData(Month,filter,weekBody,yearBody) {
     var week = Month
                 var week1Orders = 10
                 var week2Orders = 20
@@ -1001,7 +1001,7 @@ var weekBody = [{
                 "income": 21.1
             }
             ];
-        
+
         if (filter == "y") {
                 var body = yearBody;
                 
