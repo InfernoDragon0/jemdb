@@ -30,7 +30,19 @@ app.get('/', function (req, res) { //base page
 });
 
 app.post('/', function (req, res) { //base page
-    res.render(path.join(__dirname + '/html/merchant_index.html'));
+    //dbreader(res)...
+    var month = 1
+    var filter = 1
+    var weekBody = 1
+    var yearBody = 1
+
+    res.render(path.join(__dirname + '/html/merchant_index.html'),
+            {
+            month : month,
+            filter: filter,
+            weekBody: weekBody,
+            yearBody: yearBody
+            });
 });
 
 app.get('/login', function (req, res) { //base page
@@ -43,4 +55,4 @@ app.get('/lock2', function (req, res) { //base page
 
  app.use(function (req, res, next) {
         res.status(404).send("There is no page here! :c")
-    });
+});
