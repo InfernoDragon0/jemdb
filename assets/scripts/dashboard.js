@@ -862,51 +862,51 @@ window.onclick = function (event) {
 
 function myFunctionJan() {
     document.getElementById("status").innerHTML = "January";
-    runWithNewData("Jan","n");
+    runWithNewData("jan","n");
 }
 function myFunctionFeb() {
     document.getElementById("status").innerHTML = "February";
-    runWithNewData("Feb","n");
+    runWithNewData("feb","n");
 }
 function myFunctionMar() {
     document.getElementById("status").innerHTML = "March";
-    runWithNewData("Mar","n");
+    runWithNewData("mar","n");
 }
 function myFunctionApr() {
     document.getElementById("status").innerHTML = "April";
-    runWithNewData("Apr","n");
+    runWithNewData("apr","n");
 }
 function myFunctionMay() {
     document.getElementById("status").innerHTML = "May";
-    runWithNewData("May","n");
+    runWithNewData("may","n");
 }
 function myFunctionJun() {
     document.getElementById("status").innerHTML = "June";
-    runWithNewData("Jun","n");
+    runWithNewData("jun","n");
 }
 function myFunctionJul() {
     document.getElementById("status").innerHTML = "July";
-    runWithNewData("Jul","n");
+    runWithNewData("jul","n");
 }
 function myFunctionAug() {
     document.getElementById("status").innerHTML = "August";
-    runWithNewData("Aug","n");
+    runWithNewData("aug","n");
 }
 function myFunctionSep() {
     document.getElementById("status").innerHTML = "September";
-    runWithNewData("Sep","n");
+    runWithNewData("sep","n");
 }
 function myFunctionOct() {
     document.getElementById("status").innerHTML = "October";
-    runWithNewData("Oct","n");
+    runWithNewData("oct","n");
 }
 function myFunctionNov() {
     document.getElementById("status").innerHTML = "November";
-    runWithNewData("Nov","n");
+    runWithNewData("nov","n");
 }
 function myFunctionDec() {
     document.getElementById("status").innerHTML = "December";
-    runWithNewData("Dec","n");
+    runWithNewData("dec","n");
 }
 function myFunctionYear() {
     document.getElementById("status").innerHTML = "year";
@@ -920,9 +920,7 @@ function runWithNewData(Month, filter) {
     var body = JSON.parse(weekbody.replace(/&#34;/g, '"'));
 
         if (filter == "n") {
-
-                console.log ("hii"+JSON.parse(weekbody[Month]));
-                body = JSON.parse(weekbody[Month].replace(/&#34;/g, '"'));
+            body = JSON.parse(weekbody.replace(/&#34;/g, '"'))[Month];
         }
         else {
             body = JSON.parse(yearbody.replace(/&#34;/g, '"'));
