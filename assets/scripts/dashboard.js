@@ -914,15 +914,18 @@ function myFunctionYear() {
 }
 
 function runWithNewData(Month, filter) {
-    console.log("weekbody is " + weekbody)
-    console.log("yearbody is " + yearbody)
+    console.log("weekbody is " + weekbody.replace(/&#34;/g, '"'))
+    console.log("yearbody is " + yearbody.replace(/&#34;/g, '"'))
+
+    var body = JSON.parse(weekbody.replace(/&#34;/g, '"'));
 
         if (filter == "y") {
-                var body = weekbody;
+                body = JSON.parse(weekbody.replace(/&#34;/g, '"'));
         }
         else {
-            var body = yearbody;
+            body = JSON.parse(yearbody.replace(/&#34;/g, '"'));
         };
+        console.log("body is " + body)
     var chart = AmCharts.makeChart("dashboard_amchart_3", {
                 "type": "serial",
                 "addClassNames": true,

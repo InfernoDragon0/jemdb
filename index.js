@@ -36,8 +36,8 @@ app.get('/', function (req, res) { //base page
         database.genYearBody(database.data, "2017").then((yearvalue) => { 
             res.render(path.join(__dirname + '/html/merchant_index.html'),
             {
-                weekbody: weekvalue,
-                yearbody: yearvalue
+                weekbody: JSON.stringify(weekvalue),
+                yearbody: JSON.stringify(yearvalue)
             });
         })
         
