@@ -757,66 +757,10 @@ var Dashboard = function () {
 
 
             var filter = "y"
-            var week = 'jan'
+         
 
-            // cpromise = promiseWeek().then((value)=>
-            // {
-            //     week = value
-            // });
-            var week1Orders = 10
-            var week2Orders = 20
-            var week3Orders = 30
-            var week4Orders = 40
-            var week1income = 10
-            var week2income = 20
-            var week3income = 30
-            var week4income = 40
-
-
-            function weekBodyGen(Month) {
-                var week = Month
-                var week1Orders = 10
-                var week2Orders = 20
-                var week3Orders = 30
-                var week4Orders = 40
-                var week1income = 10
-                var week2income = 20
-                var week3income = 30
-                var week4income = 40
-            }
-
-            var weekBody = [{
-
-                "date": week + " Week 1",
-                "totalOrders": week1Orders,
-                "income": week1income
-            },
-            {
-
-                "date": week + " Week 2",
-                "totalOrders": week2Orders,
-                "income": week2income
-            },
-            {
-
-                "date": week + " Week 3",
-                "totalOrders": week3Orders,
-                "income": week3income
-            },
-            {
-
-                "date": week + " Week 4",
-                "totalOrders": week4Orders,
-                "income": week4income
-            }
-            ];
-
-            if (filter == "y") {
-                var body = yearBody;
-            }
-            else {
-                var body = weekBody;
-            };
+           
+            
 
 
             var chart = AmCharts.makeChart("dashboard_amchart_3", {
@@ -835,7 +779,7 @@ var Dashboard = function () {
                     "verticalPadding": 8,
                     "color": "#ffffff"
                 },
-                "dataProvider": body,
+                "dataProvider": yearBody,
                 "valueAxes": [{
                     "axisAlpha": 0,
                     "position": "left"
@@ -919,64 +863,153 @@ window.onclick = function (event) {
 
 function myFunctionJan() {
     document.getElementById("status").innerHTML = "January";
-
+    runWithNewData("Jan","n");
 }
 function myFunctionFeb() {
     document.getElementById("status").innerHTML = "February";
+    runWithNewData("Feb","n");
 }
 function myFunctionMar() {
     document.getElementById("status").innerHTML = "March";
+    runWithNewData("Mar","n");
 }
 function myFunctionApr() {
     document.getElementById("status").innerHTML = "April";
+    runWithNewData("Apr","n");
 }
 function myFunctionMay() {
     document.getElementById("status").innerHTML = "May";
+    runWithNewData("May","n");
 }
 function myFunctionJun() {
     document.getElementById("status").innerHTML = "June";
+    runWithNewData("Jun","n");
 }
 function myFunctionJul() {
     document.getElementById("status").innerHTML = "July";
+    runWithNewData("Jul","n");
 }
 function myFunctionAug() {
     document.getElementById("status").innerHTML = "August";
+    runWithNewData("Aug","n");
 }
 function myFunctionSep() {
     document.getElementById("status").innerHTML = "September";
+    runWithNewData("Sep","n");
 }
 function myFunctionOct() {
     document.getElementById("status").innerHTML = "October";
+    runWithNewData("Oct","n");
 }
 function myFunctionNov() {
     document.getElementById("status").innerHTML = "November";
+    runWithNewData("Nov","n");
 }
 function myFunctionDec() {
     document.getElementById("status").innerHTML = "December";
+    runWithNewData("Dec","n");
+}
+function myFunctionYear() {
+    document.getElementById("status").innerHTML = "year";
+    runWithNewData("-","y");
 }
 
-function runWithNewData() {
-    console.log("hello")
+function runWithNewData(Month,filter) {
+    var week = Month
+                var week1Orders = 10
+                var week2Orders = 20
+                var week3Orders = 30
+                var week4Orders = 40
+                var week1income = 10
+                var week2income = 20
+                var week3income = 30
+                var week4income = 4
+var weekBody = [{
 
-    var body = [{
-
-                "date": " hello week",
-                "totalOrders": "35",
-                "income": "1230"
+                "date": week + " Week 1",
+                "totalOrders": week1Orders,
+                "income": week1income
             },
             {
 
-                "date": "hello Week 2",
-                "totalOrders": "123",
-                "income": "3232"
+                "date": week + " Week 2",
+                "totalOrders": week2Orders,
+                "income": week2income
             },
             {
 
-                "date": "hello Week 3",
-                "totalOrders": "333",
-                "income": "5556"
+                "date": week + " Week 3",
+                "totalOrders": week3Orders,
+                "income": week3income
+            },
+            {
+
+                "date": week + " Week 4",
+                "totalOrders": week4Orders,
+                "income": week4income
             }
             ];
+
+        var yearBody = [{
+
+                "date": "Jan",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Feb",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Mar",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Apr",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "May",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Jun",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Jul",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Aug",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Sep",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Oct",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Nov",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }, {
+                "date": "Dec",
+                "totalOrders": 23.5,
+                "income": 21.1
+            }
+            ];
+        
+        if (filter == "y") {
+                var body = yearBody;
+                
+            }
+            else {
+                var body = weekBody;
+            };
+  
 
     var chart = AmCharts.makeChart("dashboard_amchart_3", {
                 "type": "serial",
